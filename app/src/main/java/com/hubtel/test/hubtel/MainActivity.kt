@@ -21,14 +21,13 @@ class MainActivity : AppCompatActivity() {
         val listView = findViewById<ListView>(R.id.main_list_view)
         listView.adapter = settingsAdapter
     }
-}
 
-
-private fun loadData(): ArrayList<Setting> {
-    return arrayListOf(
-        Setting(R.drawable.ic_monetization, "Coupons"),
-        Setting(R.drawable.ic_payments, "Payments"),
-        Setting(R.drawable.ic_message, "Messaging"),
-        Setting(R.drawable.ic_security, "Security"),
-    )
+    private fun loadData(): ArrayList<Setting> {
+        return arrayListOf(
+            Setting(R.drawable.ic_monetization, "Coupons"),
+            Setting(R.drawable.ic_payments, "Payments"),
+            Setting(R.drawable.ic_message, "Messaging"),
+            Setting(R.drawable.ic_security, "Security"),
+        )
+    }
 }
