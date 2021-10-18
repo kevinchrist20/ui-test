@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/content_background"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/layout_app_bar_main">
 
@@ -25,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="#f9f9f9"
+        android:background="#fafbfc"
         android:divider="@null"
         android:dividerHeight="0dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,19 +37,21 @@
         android:id="@+id/logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:padding="16dp"
         android:text="Log Out"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@android:color/holo_red_dark"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_list_view" />
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/footer"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
+        android:id="@+id/footer"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
-        android:background="#e3e3e3"
+        android:background="#f4f4f4"
         android:orientation="horizontal"
         android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,6 +65,7 @@
             android:gravity="start"
             android:text="version 4.2.163"
             android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -71,8 +76,10 @@
             android:gravity="end"
             android:text="Terms &amp; Policies"
             android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-            android:textColor="@color/teal_200" />
+            android:textColor="@color/teal_200"
+            android:textSize="14sp" />
 
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
